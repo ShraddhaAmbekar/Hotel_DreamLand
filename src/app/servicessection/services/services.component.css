@@ -1,3 +1,4 @@
+
 .service-item-wrap {
   background-color: rgb(241, 240, 240);
 }
@@ -121,12 +122,80 @@
   }
 }
 
-/* Medium devices (tablets, 576px to 768px) */
-@media (min-width: 576px) and (max-width: 768px) {
+/* Make images inside the service section responsive */
+.service-item-wrap img,
+.service-menu-area ul li a img {
+  width: 100%;   /* Ensure the image takes the full width of the container */
+  height: auto;  /* Maintain aspect ratio */
+  object-fit: cover;  /* Ensure the image covers the area without stretching */
+}
+
+/* Service Menu Icon Responsiveness */
+.service-menu-area ul li a .service-icon {
+  height: 5.625rem;
+  width: 5.625rem;
+  background-color: rgb(226, 191, 102);
+  line-height: 5.625rem;
+  text-align: center;
+  border-radius: 100%;
+  float: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-menu-area ul li a .service-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Design for Smaller Screens */
+
+/* Small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .service-item-wrap img,
+  .service-menu-area ul li a img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
   .service-menu-area ul li a .service-icon {
     height: 4.5rem;
     width: 4.5rem;
     line-height: 4.5rem;
+  }
+
+  .service-menu-area ul li a p,
+  .service-menu-area ul li a h5 {
+    padding-left: 4rem;
+  }
+
+  .counter {
+    padding: 2rem;
+  }
+
+  .counter h1 {
+    font-size: 1.5rem;
+  }
+
+  .counter p {
+    font-size: 1rem;
+  }
+}
+
+/* Medium devices (tablets, 576px to 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .service-item-wrap img,
+  .service-menu-area ul li a img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .service-menu-area ul li a .service-icon {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
   }
 
   .service-menu-area ul li a p,
@@ -149,6 +218,13 @@
 
 /* Large devices (desktops, 768px and above) */
 @media (min-width: 768px) {
+  .service-item-wrap img,
+  .service-menu-area ul li a img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
   .service-menu-area ul li a .service-icon {
     height: 5.625rem;
     width: 5.625rem;
