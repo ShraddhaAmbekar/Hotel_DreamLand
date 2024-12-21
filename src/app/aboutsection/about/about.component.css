@@ -1,0 +1,109 @@
+/* Container with a max-width for larger screens */
+.container {
+  max-width: 1200px; /* Limits the width on large screens */
+  margin: 0 auto; /* Centers the container */
+}
+
+/* Wrapper for the About section */
+.about-wrapper {
+  padding-top: 1.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack items vertically */
+}
+
+/* Span inside the About section */
+span {
+  color: orange;
+}
+
+/* Image styling - set width for responsiveness */
+.img-fluid {
+  width: 100%;
+  max-width: 400px; /* Set a max-width for the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Content styling */
+.content {
+  text-align: center;
+  padding: 1rem; /* Adds padding to avoid content touching the sides */
+}
+
+/* Button styling for the Explore button */
+.explore-btn {
+  width: 170px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 25px;
+  background-color: transparent;
+  border: 2px solid blueviolet;
+  color: blueviolet;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Explore button hover effect */
+.explore-btn:hover {
+  background-color: blueviolet;
+  border: transparent;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Back button styling */
+.back-btn {
+  font-size: 25px;
+  background: transparent;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* Hover effect for the back button */
+.back-btn:hover {
+  background-color: rgb(214, 205, 205);
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust image styling for smaller screens */
+  .img-fluid {
+    width: 100%;
+    max-width: 100%; /* Remove max-width to allow full width */
+  }
+
+  /* Adjust About wrapper padding on smaller screens */
+  .about-wrapper {
+    padding-top: 2rem;
+  }
+
+  /* Adjust Explore button size for smaller screens */
+  .explore-btn {
+    width: 150px;
+    font-size: 18px;
+  }
+  
+  /* Adjust Back button position for smaller screens */
+  .back-btn {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Adjust padding for even smaller screens */
+  .about-wrapper {
+    padding-top: 1rem;
+  }
+
+  /* Adjust Explore button size further for smaller screens */
+  .explore-btn {
+    width: 130px;
+    font-size: 16px;
+  }
+}

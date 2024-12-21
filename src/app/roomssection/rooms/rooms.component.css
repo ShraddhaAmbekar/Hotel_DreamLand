@@ -1,0 +1,99 @@
+/* Room section wrapper */
+.rooms_wrapper {
+  padding: 4rem 0;
+}
+
+/* Room hover effect */
+.room {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and box shadow */
+}
+
+.room:hover {
+  transform: scale(1.05); /* Slightly scale the room card on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow for better hover effect */
+}
+
+/* Room content border styling */
+.room-content {
+  border: 0.125rem solid #ddd; /* Subtle border around the content */
+  padding: 20px; /* Padding for inner content */
+  border-radius: 8px; /* Rounded corners for the content */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+.room:hover .room-content {
+  border-color: blueviolet; /* Change border color on hover */
+}
+
+/* Button styling */
+.main-btn {
+  font-size: 20px;
+  padding: 10px 20px; /* Add padding for better button size */
+  background: transparent;
+  border: 2px solid blueviolet; /* Add border to match the button's color */
+  color: blueviolet;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.main-btn:hover {
+  font-size: 22px;
+  color: white;
+  background-color: blueviolet;
+  border-color: blueviolet; /* Change border color on hover */
+  font-weight: 700; /* Make text bold on hover */
+}
+
+/* Back button styling */
+.back-btn {
+  font-size: 25px;
+  background: transparent;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: rgb(214, 205, 205); /* Add hover effect for the back button */
+}
+
+/* Section title styling */
+.section-title h6 {
+  color: #555;
+}
+
+.section-title h2 {
+  font-weight: 700;
+  color: #333;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  /* Adjust room cards for smaller screens */
+  .rooms_wrapper .row-cols-md-3 {
+    row-gap: 30px;
+  }
+
+  .room-content {
+    padding: 15px; /* Reduce padding on smaller screens */
+  }
+
+  .main-btn {
+    font-size: 18px; /* Adjust button font size */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Adjust room card content for smaller screens */
+  .room-content {
+    padding: 10px; /* Further reduce padding for small screens */
+  }
+
+  .main-btn {
+    width: 100%; /* Make the button full width on small screens */
+  }
+}
