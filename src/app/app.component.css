@@ -1,0 +1,86 @@
+/* Navbar Styling */
+.header_wrapper {
+  position: relative;
+  z-index: 100;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.9); /* Transparent background */
+  padding: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff7f50; /* Highlight color */
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-color: #ff7f50; /* Toggler icon color */
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  color: #333; /* Dark text */
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.2rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar .navbar-nav .nav-item .nav-link:hover,
+.navbar .navbar-nav .nav-item .nav-link.active {
+  color: #ff7f50; /* Highlight color on hover */
+}
+
+.navbar .navbar-nav {
+  margin-left: auto;
+  display: flex;
+}
+
+.navbar .navbar-nav .nav-item {
+  margin-right: 1rem;
+}
+
+/* Navbar Toggler */
+.navbar-toggler {
+  display: none; /* Hidden by default */
+}
+
+@media (max-width: 992px) {
+  .navbar .navbar-nav {
+    flex-direction: column; /* Stack nav items vertically on mobile */
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .navbar .navbar-nav .nav-item {
+    margin-bottom: 1rem; /* Space between items on mobile */
+  }
+
+  .navbar-toggler {
+    display: block; /* Show the toggle button on mobile */
+  }
+
+  .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 1rem; /* Smaller font on mobile */
+  }
+
+
+}
+
+/* Add background color to navbar when scrolled */
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+

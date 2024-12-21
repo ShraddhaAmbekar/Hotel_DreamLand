@@ -60,7 +60,7 @@
 
 /* Countdown */
 .counter {
-  background-image: url('/assets/images/counter.jpeg'); /* Absolute path to resolve the issue */
+  background-image: url('/assets/images/counter.jpeg'); /* Absolute path for the image */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,4 +85,90 @@
   position: relative;
   z-index: 3;
   color: white;
+}
+
+/* Responsive Design */
+
+/* Small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .service-menu-area ul li a .service-icon {
+    height: 3.75rem;
+    width: 3.75rem;
+    line-height: 3.75rem;
+  }
+
+  .service-menu-area ul li a p,
+  .service-menu-area ul li a h5 {
+    padding-left: 4rem;
+  }
+
+  .service-menu-area ul li:nth-child(2),
+  .service-menu-area ul li:nth-child(3),
+  .service-menu-area ul li:nth-child(4) {
+    margin-left: 0; /* Reset margin for better alignment on small screens */
+  }
+
+  .counter {
+    padding: 2rem;
+  }
+
+  .counter h1 {
+    font-size: 1.5rem;
+  }
+
+  .counter p {
+    font-size: 1rem;
+  }
+}
+
+/* Medium devices (tablets, 576px to 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .service-menu-area ul li a .service-icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+  }
+
+  .service-menu-area ul li a p,
+  .service-menu-area ul li a h5 {
+    padding-left: 5rem;
+  }
+
+  .counter {
+    padding: 2.5rem;
+  }
+
+  .counter h1 {
+    font-size: 2rem;
+  }
+
+  .counter p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Large devices (desktops, 768px and above) */
+@media (min-width: 768px) {
+  .service-menu-area ul li a .service-icon {
+    height: 5.625rem;
+    width: 5.625rem;
+    line-height: 5.625rem;
+  }
+
+  .service-menu-area ul li a p,
+  .service-menu-area ul li a h5 {
+    padding-left: 6.875rem;
+  }
+
+  .counter {
+    padding: 3.125rem;
+  }
+
+  .counter h1 {
+    font-size: 2.5rem;
+  }
+
+  .counter p {
+    font-size: 1.5rem;
+  }
 }
