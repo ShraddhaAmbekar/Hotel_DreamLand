@@ -5,7 +5,7 @@
 }
 
 .navbar {
-  background-color: rgba(255, 255, 255, 0.9); /* Transparent background */
+  background-color: rgba(255, 255, 255, 0.9); 
   padding: 1rem 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -14,7 +14,7 @@
 .navbar .navbar-brand {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #ff7f50; /* Highlight color */
+  color: #ff7f50; 
   text-transform: uppercase;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -25,11 +25,11 @@
 }
 
 .navbar-toggler-icon {
-  background-color: #ff7f50; /* Toggler icon color */
+  background-color: #ff7f50; 
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
-  color: #333; /* Dark text */
+  color: #333; 
   font-weight: 600;
   font-size: 1.1rem;
   padding: 0.5rem 1.2rem;
@@ -39,7 +39,7 @@
 
 .navbar .navbar-nav .nav-item .nav-link:hover,
 .navbar .navbar-nav .nav-item .nav-link.active {
-  color: #ff7f50; /* Highlight color on hover */
+  color: #ff7f50; 
 }
 
 .navbar .navbar-nav {
@@ -53,34 +53,43 @@
 
 /* Navbar Toggler */
 .navbar-toggler {
-  display: none; /* Hidden by default */
+  display: none; 
 }
 
 @media (max-width: 992px) {
   .navbar .navbar-nav {
-    flex-direction: column; /* Stack nav items vertically on mobile */
+    flex-direction: column; 
     text-align: center;
     padding: 1rem 0;
   }
 
   .navbar .navbar-nav .nav-item {
-    margin-bottom: 1rem; /* Space between items on mobile */
+    margin-bottom: 1rem; 
   }
 
   .navbar-toggler {
-    display: block; /* Show the toggle button on mobile */
+    display: block; 
   }
 
   .navbar .navbar-nav .nav-item .nav-link {
-    font-size: 1rem; /* Smaller font on mobile */
+    font-size: 1rem;
   }
-
-
+}
+.navbar .navbar-nav .nav-item .nav-link.active {
+  color: #ff7f50;
 }
 
-/* Add background color to navbar when scrolled */
+.navbar .navbar-nav .nav-item .nav-link:hover,
+.navbar .navbar-nav .nav-item .nav-link.active {
+  color: #ff7f50;
+}
+.navbar-collapse {
+  transition: height 0.35s ease; /* Smooth collapse transition */
+}
+
+
+
 .navbar-scrolled {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
-

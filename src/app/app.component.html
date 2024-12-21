@@ -1,51 +1,45 @@
 <header class="header_wrapper">
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">DreamLand</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <a class="navbar-brand">DreamLand</a>
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar()" aria-controls="navbarNav" [attr.aria-expanded]="isNavbarCollapsed ? 'false' : 'true'" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse" [ngClass]="{'show': !isNavbarCollapsed}" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeNavbar()">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/about/about-page">About</a>
+            <a class="nav-link" routerLink="/about/about-page" (click)="closeNavbar()">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/rooms/rooms-page">Rooms</a>
+            <a class="nav-link" routerLink="/rooms/rooms-page" (click)="closeNavbar()">Rooms</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/services/services-page">Services</a>
+            <a class="nav-link" routerLink="/services/services-page" (click)="closeNavbar()">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/team/team-page">Team</a>
+            <a class="nav-link" routerLink="/team/team-page" (click)="closeNavbar()">Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/gallery/gallery-page">Gallery</a>
+            <a class="nav-link" routerLink="/gallery/gallery-page" (click)="closeNavbar()">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/price/price-page">Price</a>
+            <a class="nav-link" routerLink="/price/price-page" (click)="closeNavbar()">Price</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/blog/blog-page">Blog</a>
+            <a class="nav-link" routerLink="/blog/blog-page" (click)="closeNavbar()">Blog</a>
           </li>
           <li class="nav-item mt-3 mt-lg-0">
-            <a class="main-btn" routerLink="/booking-area/check-available">Book Now</a>
+            <a class="main-btn" routerLink="/booking-area/check-available" (click)="closeNavbar()">Book Now</a>
           </li>
-        
-        <li class="nav-item">
-          
-          <i routerLink="/signin" class=" m-2 bi bi-person-circle fs-3"></i>
-       
-        </li>
+          <li class="nav-item">
+            <i routerLink="/signin" class="m-2 bi bi-person-circle fs-3"></i>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 </header>
-
-
 <router-outlet></router-outlet>
-
