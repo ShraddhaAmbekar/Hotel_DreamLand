@@ -1,25 +1,66 @@
-.main{
-
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 600px;
-    padding: 10px; 
-    border: 2px solid;
+/* Container Styles */
+.container {
+  max-width: 700px;
+  margin-top: 50px;
+  padding: 20px;
 }
 
-.check-available{
-  background-color: rgb(255, 255, 255);
-  margin: 30px;
-  border-radius: 20px;
-  font-size: 20px;
-  padding: 5px; 
+/* Heading Styles */
+h1.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
 }
 
-label{
-  margin: 10px;
+/* Form Styles */
+.booking-form {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-select{
-  margin:10px
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-group h5 {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.form-control,
+.form-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Focused Input Styles */
+.form-control:focus,
+.form-select:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 5px rgba(108, 99, 255, 0.5);
+}
+
+/* Button Styles */
+.check-availability-btn {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.check-availability-btn:hover {
+  background-color: #5a52e6;
+  transition: background-color 0.3s ease;
 }
